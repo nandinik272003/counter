@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        .card{
+            width: 200px;
+            margin: 20px auto;
+            border-radius: 30px; 
+            background-color: rgb(250, 247, 244);
+            height: 200px;
+            cursor: pointer;
+            text-align:center;
+            padding: 10px;
+            height: 150px;
+            
+        }
+            
+        .a{
+            color: blueviolet;
+        }
+        .b:hover{
+            background-color: rgb(109, 109, 245);
+        }
+        .c:hover{
+            background-color: rgb(109, 109, 245);
+        }
+        .d:hover{
+            background-color: rgb(109, 109, 245);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+    <h2 class="a">Counter</h2>
+    <h1 id="count">0</h1>
+    <button onclick="increase()" class="b">+</button>
+    <button onclick="decrease()" class="c">-</button>
+    <button onclick="reset()" class="d">Reset</button>
+    </div>
+
+    <script>
+        let count=0;
+        function increase(){
+            count++;
+            document.getElementById("count").innerHTML=count;
+        }
+        function decrease(){
+            if(count>0){
+                count--;
+            document.getElementById("count").innerHTML=count;
+        }
+    }
+        function reset(){
+            count=0;
+            document.getElementById("count").innerHTML=count;
+        }
+    
+    </script>
+</body>
+</html>
